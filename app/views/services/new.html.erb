@@ -1,2 +1,16 @@
 <h1>Services#new</h1>
 <p>Find me in app/views/services/new.html.erb</p>
+
+<%= form_tag(:action => "create", :id => @user.id) do %>
+
+  <p>Purpose:
+  <%= text_field_tag("purpose") %></p>
+  <p>Comment:
+  <%= text_field_tag("comment") %></p>
+
+  <%= submit_tag("Save Service") %>
+<% end %>
+
+    
+    <%= link_to 'Go back to Profile', @user %>
+    <%= link_to 'Show all services', :controller => :services, :action => :index %>

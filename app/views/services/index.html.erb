@@ -1,2 +1,22 @@
 <h1>Services#index</h1>
 <p>Find me in app/views/services/index.html.erb</p>
+<table>
+  <thead>
+    <tr>
+      <th>Purpose</th>
+      <th>Money</th>
+      <th>Go to</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @services.each do |service| %>
+      <tr>
+        <td><%= service.purpose %></td>
+        <td><%= service.money %></td>
+        <td><%= link_to 'Show', service %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
