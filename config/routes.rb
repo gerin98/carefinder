@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   get 'services/new'
-
   get 'services/show'
-
   get 'services/index'
 
   get 'users/new'
