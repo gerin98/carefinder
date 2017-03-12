@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  purpose: MyString
+  time: 2017-03-12 03:46:43
+  date: 2017-03-12
+  money: 1.5
+  comment: MyString
+  user: one
+
+two:
+  purpose: MyString
+  time: 2017-03-12 03:46:43
+  date: 2017-03-12
+  money: 1.5
+  comment: MyString
+  user: two
