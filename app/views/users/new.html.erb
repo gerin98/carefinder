@@ -30,30 +30,12 @@
 <body>
   
  
- <div class="navbar navbar-inverse set-radius-zero" >
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">
-
-                    <img src="/assets/logo.png" width="150" height="100" />
-                </a>
-
-            </div>
-
-          
-        </div>
-    </div>
-    <!-- LOGO HEADER END-->
     <section class="menu-section">
         <div class="container">
             <div class="row ">
                 <div class="col-md-12">
                     <div class="navbar-collapse collapse ">
+                         <img src="/assets/logo.png" width="150" height="100" />
                         <ul id="menu-top" class="nav navbar-nav navbar-right">
                           <li><a <%= link_to 'Home', :controller => :static_pages, :action => :home %></a></li>
                            
@@ -69,28 +51,37 @@
         </div>
     </section>
 
-    <h1>Sign up</h1>
-
+   <h1>Sign up</h1>
     <%= form_for(@user) do |f| %>
-    <p><%= f.label :first_name %>
-      <%= f.text_field :first_name %></p>
-      
-      
-     <p><%= f.label :last_name %>
-      <%= f.text_field :last_name %></p>
+    <div class="container"> 
+    <table>
+    <tr>
+    <th><%= f.label :firstname %></th>
+    <th><%= f.text_field :first_name %></th> 
+      </tr>
+      </tr>
+      <th><%= f.label :lastname %></th>
+      <th><%= f.text_field :last_name %></th>
+     </tr>
+     </tr>
+    <th><%= f.label :email %></th>
+    <th> <%= f.email_field :email %> </th>
+    </tr>
+    <tr>
+    <th><%= f.label :password %></th>
+    <th><%= f.password_field :password %></th>
+    </tr>
+    </tr>
+     <th><%= f.label :streetname %></th>
+    <th><%= f.text_field :street_name %></th>    
+    </tr>
+    </table>
 
-      <p><%= f.label :email %>
-      <%= f.email_field :email %></p>
-
-      <p><%= f.label :password %>
-      <%= f.password_field :password %></p>
-      
-      <p><%= f.label :street_name %>
-      <%= f.text_field :street_name %></p>
-
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
-    <% end %>
-
+          <div class="clearfix">
+      <p></p><%= f.submit "Create my account", class: "btn btn-warning" %></p>
+      </div>
+    </div>
+       <% end %>
 
 
 

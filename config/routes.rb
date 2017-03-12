@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'services/new'
   get 'services/show'
   get 'services/index'
+  get 'services/accept'
 
   get 'users/new'
 

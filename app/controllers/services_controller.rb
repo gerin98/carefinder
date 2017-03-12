@@ -12,9 +12,16 @@ class ServicesController < ApplicationController
     
     
   end
+  
+  def accept
+    @user = User.find(params[:iduser])
+    @service = Service.find(params[:idservice])
+  end
 
   def index
-    @services = Service.all
+    @user = User.find(params[:iduser])
+    @services = Service.where("user_id != ?", @user.id)
+
   end
   
    def create
@@ -22,6 +29,7 @@ class ServicesController < ApplicationController
     @service = @user.services.build()
     @service.purpose = params[:purpose]
     @service.comment = params[:comment]
+    @service.money = params[:money]
     if @service.save
       flash[:success] = "Service created"
       redirect_to @service
